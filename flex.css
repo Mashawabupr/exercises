@@ -1,0 +1,9 @@
+
+.container,.cub{display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.right{width:100px}
+.left img{width:30%}
