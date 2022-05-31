@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <button onclick="cart('APPLE')">APPLE</button>
+    <button onclick="cart('TOMATO')">TOMATO</button>
+    <button onclick="cart('EGGS')">EGGS</button>
+    <button onclick="cart_reset()">CLEAR</button>
+    <div id="cart"></div>
+    <script>
+        let cart_shop=document.getElementById("cart")
+        function cart(a){
+            let d = document.createElement("div");
+            d.innerText=a;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+
+        }
+    
+        function cart_reset(){
+            cart_shop.innerText="";
+            
+        }
+/*
+            let list=[]
+        function cart1(){
+            let i=document.getElementById("APPLE")
+            ing=i.innerText
+            list.push(ing)
+            let d = document.createElement("div");
+            d.innerText=ing;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+
+        }
+        function cart2(){
+            let i=document.getElementById("TOMATO")
+            ing=i.innerText
+            list.push(ing)
+            let d = document.createElement("div");
+            d.innerText=ing;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+        }
+        function cart3(){
+            let i=document.getElementById("EGGS")
+            ing=i.innerText
+            list.push(ing)
+            let d = document.createElement("div");
+            d.innerText=ing;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+        }
+        function cart_reset(){
+            let i=document.getElementById("CLEAR")
+            let m=document.getElementById("cart");
+            m.innerText=""
+            list=[]
+            
+        }*/
+
+
+    </script>
+</body>
+</html> 

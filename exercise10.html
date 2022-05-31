@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <input  id="text"/>
+    <button onclick="toinch()">Convert to cm</button>
+    <button  onclick="tocm()">Convert to inch</button>
+
+    <script>
+        let t = document.getElementById("text")
+        function toinch() {
+            
+            let v=t.value
+            let inch= v*2.54;
+            let d= document.createElement("div");
+            d.innerText=inch
+            document.body.appendChild(d)
+
+
+        }
+        function tocm() {
+            
+            let v=t.value
+            let inch= v/2.54;
+            let d= document.createElement("div");
+            d.innerText=inch
+            document.body.appendChild(d)
+
+
+        }
+     
+    </script>
+</body>
+</html>
