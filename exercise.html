@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <button id="APPLE" onclick="cart1()">APPLE</button>
+    <button id="TOMATO" onclick="cart2()">TOMATO</button>
+    <button id="EGGS" onclick="cart3()">EGGS</button>
+    <button id="CLEAR" onclick="cart_reset()">CLEAR</button>
+    <div id="cart"></div>
+    <script>
+        let list=[]
+        function cart1(){
+            let i=document.getElementById("APPLE")
+            ing=i.innerText
+            list.push(ing)
+            let d = document.createElement("div");
+            d.innerText=ing;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+
+        }
+        function cart2(){
+            let i=document.getElementById("TOMATO")
+            ing=i.innerText
+            list.push(ing)
+            let d = document.createElement("div");
+            d.innerText=ing;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+        }
+        function cart3(){
+            let i=document.getElementById("EGGS")
+            ing=i.innerText
+            list.push(ing)
+            let d = document.createElement("div");
+            d.innerText=ing;
+            let m=document.getElementById("cart");
+            m.appendChild(d)
+        }
+        function cart_reset(){
+            let i=document.getElementById("CLEAR")
+            let m=document.getElementById("cart");
+            m.innerText=""
+            list=[]
+            
+        }
+
+
+
+    </script>
+</body>
+</html> 
