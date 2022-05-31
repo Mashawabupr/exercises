@@ -1,54 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>exercise</title>
 </head>
 <body>
-    <button id="APPLE" onclick="cart1()">APPLE</button>
-    <button id="TOMATO" onclick="cart2()">TOMATO</button>
-    <button id="EGGS" onclick="cart3()">EGGS</button>
-    <button id="CLEAR" onclick="cart_reset()">CLEAR</button>
-    <div id="cart"></div>
+    <input type="text" id="find"/>
+    <button  onclick="display()">
+        click me!
+    </button>
+<button id="change" onclick="func()">Change me!</button>
+<div id="counter">0</div><button onclick="increase()">UP</button>
+<div id="counter2">0</div><button onclick="de()">Down</button>
     <script>
-        let list=[]
-        function cart1(){
-            let i=document.getElementById("APPLE")
-            ing=i.innerText
-            list.push(ing)
-            let d = document.createElement("div");
-            d.innerText=ing;
-            let m=document.getElementById("cart");
-            m.appendChild(d)
+        //5
+        let todo1="Get groceries"
+        let todo2="Wash car"
+        let todo3="Make dinner"
 
+        let button = document.createElement("button");
+        button.innerText="Click Me";
+        document.body.appendChild(button);
+        
+        document.title="changed";
+         
+        //6
+
+        function greeting(firstname){
+            
+            console.log("Hello " + firstname)
         }
-        function cart2(){
-            let i=document.getElementById("TOMATO")
-            ing=i.innerText
-            list.push(ing)
-            let d = document.createElement("div");
-            d.innerText=ing;
-            let m=document.getElementById("cart");
-            m.appendChild(d)
+        greeting("Simon")
+
+        function toupper(str){
+        
+            console.log(str.toUpperCase())
         }
-        function cart3(){
-            let i=document.getElementById("EGGS")
-            ing=i.innerText
-            list.push(ing)
-            let d = document.createElement("div");
-            d.innerText=ing;
-            let m=document.getElementById("cart");
-            m.appendChild(d)
+        toupper("simon")
+
+
+        function convert(length){
+            console.log(length*2.54)
         }
-        function cart_reset(){
-            let i=document.getElementById("CLEAR")
-            let m=document.getElementById("cart");
-            m.innerText=""
-            list=[]
+        convert(3)
+        //7
+            function toUpper(array){
+            let list=[]
+            array.forEach(function(i){
+                
+                list.push(i.toUpperCase())
+        
+            
+           })
+           console.log(list)
             
         }
+        toUpper(["hello","bye"])
 
 
 
+        function arrayDouble(array){
+            let list=[]
+            array.forEach(function(i){
+                list.push(i);
+                list.push(i);
+            })
+            console.log(list)
+
+        }
+        arrayDouble(["bark","meow"])
+
+
+        function arraySum(array){
+            let sum=0;
+            array.forEach(function(i){
+                sum+=i;
+            })
+            console.log(sum)
+        }
+        arraySum([20,7])
+
+
+
+        //8
+        function func(){
+            let a= document.getElementById("change")
+            a.innerText="DONE"
+        }
+
+
+
+
+        let count=0;
+            function increase(){
+                
+                count+=1
+                let i = document.getElementById("counter")
+                
+                i.innerText=count
+            }
+            
+        let count2=0;
+            function de(){
+                
+                count2-=1
+                let i = document.getElementById("counter2")
+                
+                i.innerText=count2
+            }
+            
+            function display(){
+                let a = document.getElementById("find")
+                let inner=a.value
+                let d = document.createElement("div");
+                d.innerText=inner;
+                document.body.appendChild(d);
+    }
     </script>
+ 
+   
 </body>
-</html> 
+</html>
